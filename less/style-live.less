@@ -1,0 +1,218 @@
+@input-width : 60px;
+@input-font-size: 18px;
+@side-margin : 4%;
+@color : #00FF00;
+@padding : 20px;
+
+
+body,
+html {
+    background-color: black;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    overflow: hidden;
+    color: @color;
+}
+
+.header {
+    text-align: center;
+    height: 6vh;
+    margin: 8px 40px 16px 40px;
+    padding: 8px;
+}
+
+.sequence {
+    text-align: center;
+}
+
+.wrapper {
+    font-size: @input-font-size + 4px;
+    padding: @padding;
+    height: 80vh;
+    text-align: center;
+}
+
+.indicator{
+    font-size: 14px;
+}
+
+.indicator #i{
+    position: absolute;
+    right: 60%;
+    text-align: right;
+    word-spacing: 20px;
+}
+
+
+.indicator #t{
+    left: 60%;
+    position: absolute;
+    text-align: left;
+    word-spacing: 20px;
+}
+
+.control {
+    padding: 10px;
+}
+
+.control .random-value {
+    font-size: 12px;
+    left: 60%;
+    margin-top: 8px;
+    position: absolute;
+    text-align: left;
+    width: 200000px;
+    word-spacing: 20px;
+}
+
+.control .tag {
+    font-size: 12px;
+    margin-top: 8px;
+    position: absolute;
+    right: 60%;
+    text-align: right;
+    width: 20000px;
+    word-spacing: 130px;
+}
+
+.input {
+    width: @input-width ;
+    font-size: @input-font-size;
+    text-align: center;
+    background-color: black;
+    color: @color;
+    border: 0.8px solid @color;
+    font-family: "Courier New", Courier, monospace;
+}
+
+
+#play-button {
+    width: 30px;
+    height: 30px;
+    margin-top: 40px;
+}
+
+.info-button {
+    position: absolute;
+    right: @side-margin;
+    bottom: 2%;
+    font-size: 20px;
+    cursor: default;
+}
+
+.info {
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    width: 100%;
+    height: 80%;
+    display: none;
+    z-index: 2000;
+    margin: 0;
+}
+
+.info #info-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding : 0;
+    text-align: center;
+}
+
+.info #info-content img {
+    vertical-align: middle;
+    margin: 0 10px 0 10px;
+}
+
+.info #info-content p {
+    width : 640px;
+    font-size: 16px;
+    line-height: 1.8em;
+}
+
+.info #info-content span {
+    font-size: 18px;
+}
+
+.info #info-content a:link, a:visited {
+    color : @color;
+}
+
+.mode {
+    position: absolute;
+    left: @side-margin;
+    bottom: 2%;
+    font-size: 14px;
+    cursor: default;
+}
+
+
+ 
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+button:focus {
+    outline: 0;
+}
+
+
+a:link,
+a:visited {
+    text-decoration: none;
+    cursor: default;
+}
+
+
+
+
+.loader-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 200;
+}
+
+.loader {
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.loader:after {
+    content: '.';
+    animation: dots 2s steps(5, end) infinite;
+    margin-left: 2px;
+}
+
+@keyframes dots {
+    0%,
+    20% {
+        color: rgba(0, 0, 0, 0);
+        text-shadow: 10px 0 0 rgba(0, 0, 0, 0),
+        20px 0 0 rgba(0, 0, 0, 0);
+    }
+    40% {
+        color: @color;
+        text-shadow: 10px 0 0 rgba(0, 0, 0, 0),
+        20px 0 0 rgba(0, 0, 0, 0);
+    }
+    60% {
+        text-shadow: 10px 0 0 @color,
+        20px 0 0 rgba(0, 0, 0, 0);
+    }
+    80%,
+    100% {
+        text-shadow: 10px 0 0 @color,
+        20px 0 0 @color;
+    }
+}

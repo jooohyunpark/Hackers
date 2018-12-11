@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hackers</title>
+    <meta name="author" content="Joohyun Park">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="less/style-live.less">
+    <link rel="stylesheet/less" type="text/css" href="less/style-live.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    
+<div class="loader-wrapper">
+<div class="loader">Loading</div>
+</div>
+
+
+    <!-- sound file -->
+    <audio id="ambient" preload="auto">
+  <source src="sound/ambient.mp3" type="audio/mpeg">
+</audio>
+   <audio id="ambient2" preload="auto">
+  <source src="sound/ambient2.mp3" type="audio/mpeg">
+</audio>
+   <audio id="cosmic" preload="auto">
+  <source src="sound/cosmic.mp3" type="audio/mpeg">
+</audio>
+   <audio id="cosmic2" preload="auto">
+  <source src="sound/cosmic2.mp3" type="audio/mpeg">
+</audio>
+    <audio id="base" preload="auto">
+  <source src="sound/base.mp3" type="audio/mpeg">
+</audio>
+    <audio id="base2" preload="auto">
+  <source src="sound/base2.mp3" type="audio/mpeg">
+</audio>
+    <audio id="drum" preload="auto">
+  <source src="sound/drum.mp3" type="audio/mpeg">
+</audio>
+    <audio id="drum2" preload="auto">
+  <source src="sound/drum2.mp3" type="audio/mpeg">
+</audio>
+    <audio id="snare" preload="auto">
+  <source src="sound/snare.mp3" type="audio/mpeg">
+</audio>
+    <audio id="light-drum" preload="auto">
+  <source src="sound/light-drum.mp3" type="audio/mpeg">
+</audio>
+    <audio id="exit" preload="auto">
+  <source src="sound/exit.mp3" type="audio/mpeg">
+</audio>
+   <audio id="exit2" preload="auto">
+  <source src="sound/exit2.mp3" type="audio/mpeg">
+</audio>
+    <audio id="oriental" preload="auto">
+  <source src="sound/oriental.mp3" type="audio/mpeg">
+</audio>
+    <audio id="laser" preload="auto">
+  <source src="sound/laser.mp3" type="audio/mpeg">
+</audio>
+    <audio id="xx" preload="auto">
+  <source src="sound/xx.mp3" type="audio/mpeg">
+</audio>
+    <!--          -->
+
+
+    <div class="header">
+        <img src="img/title.png" id="title" height="16" alt="">
+    </div>
+
+    <div class="sequence">&nbsp;</div>
+           <div class="indicator"><span id="i">&nbsp;</span><span id="t">&nbsp;</span></div>
+
+
+    <div class="wrapper">
+        <div class="control">
+            <span class="tag" id="ambient-tag"></span> AM1 <input type="text" min="0" max="1" value="0" class="input" id="ambient-input">
+            <span class="random-value" id="ambient-random"></span>
+        </div>
+        <div class="control">
+            <span class="tag" id="ambient-tag-2"></span> AM2 <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2">
+            <span class="random-value" id="ambient-random-2"></span>
+        </div>
+        <div class="control">
+            <span class="tag" id="cosmic-tag"></span> CO1 <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input">
+            <span class="random-value" id="cosmic-random"></span>
+        </div>
+        <div class="control">
+            <span class="tag" id="cosmic-tag-2"></span> CO2 <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2">
+            <span class="random-value" id="cosmic-random-2"></span>
+        </div>                        
+        <div class="control">
+            <span class="tag" id="base-tag"></span> BA1 <input type="text" min="0" max="1" value="0" class="input" id="base-input">
+            <span class="random-value" id="base-random"></span>
+        </div>
+        <div class="control">
+            <span class="tag" id="base-tag-2"></span> BA2 <input type="text" min="0" max="1" value="0" class="input" id="base-input-2">
+            <span class="random-value" id="base-random-2"></span>
+        </div>
+        <div class="control">
+            <span class="tag" id="drum-tag"></span> DR1 <input type="text" min="0" max="1" value="0" class="input" id="drum-input">
+            <span class="random-value" id="drum-random"></span>
+        </div>
+        <div class="control">
+            <span class="tag" id="drum-tag-2"></span> DR2 <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2">
+            <span class="random-value" id="drum-random-2"></span>
+        </div>
+        <div class="control">
+            <span class="tag" id="snare-tag"></span> SN0 <input type="text" min="0" max="1" value="0" class="input" id="snare-input">
+            <span class="random-value" id="snare-random"></span>
+        </div>
+        <div class="control">
+            <span class="tag" id="light-drum-tag"></span> LD0 <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input">
+            <span class="random-value" id="light-drum-random"></span>
+        </div>
+        <div class="control">
+            <span class="tag" id="exit-tag"></span> EX1 <input type="text" min="0" max="1" value="0" class="input" id="exit-input">
+            <span class="random-value" id="exit-random"></span>
+        </div>
+        <div class="control">
+            <span class="tag" id="exit-tag-2"></span> EX2 <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2">
+            <span class="random-value" id="exit-random-2"></span>
+        </div>        
+        <div class="control">
+            <span class="tag" id="oriental-tag"></span> OR0 <input type="text" min="0" max="1" value="0" class="input" id="oriental-input">
+            <span class="random-value" id="oriental-random"></span>
+        </div>
+        <div class="control">
+            <span class="tag" id="laser-tag"></span> LA0 <input type="text" min="0" max="1" value="0" class="input" id="laser-input">
+            <span class="random-value" id="laser-random"></span>
+        </div>
+        <div class="control">
+            <span class="tag" id="xx-tag"></span> XX0 <input type="text" min="0" max="1" value="0" class="input" id="xx-input">
+            <span class="random-value" id="xx-random"></span>
+        </div>
+
+
+        <button id="play-button"><img id="button-img" src="img/play.png" width="20" alt=""></button>
+    </div>
+
+    <div class="info-button" onclick="showInfo()">?</div>
+    <div class="info">
+        <div id="info-content">
+            <p>&lt;info&gt;<br>This project is inspired from the concept of <a href="https://en.wikipedia.org/wiki/Markov_chain" target="_blank">Markov chain</a>.<br>Sounds of every sequence are triggered randomly <br> based on the possibility of their states. <br>Change value. Play sequence. Hack it.<br>&lt;/info&gt;<br><br><br><br><br>
+               &lt;design&gt;&lt;development&gt;<br><a href="https://www.parkjoohyun.com/" target="_blank"><span>Joohyun Park</span></a><br>&lt;/development&gt;&lt;/design&gt;<br><br><br> 
+                &lt;music&gt;<br><a href="https://soundcloud.com/saiopark" target="_blank"><span>SAIO.</span></a><br>&lt;/music&gt;
+                </p>
+        </div>
+    </div>
+
+
+    <div class="mode">Mode: <span><a href="/" style="color:#00FF00;">Basic</a></span> | <span><a href="live.html" style="padding:0 4px 0 4px;background-color:#00FF00; color:black;">Live</a></span></div>
+
+
+    <script src="script/input-live.js"></script>
+    <script src="script/hackers-live.js"></script>
+</body>
+
+</html>

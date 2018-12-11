@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hackers</title>
+    <meta name="author" content="Joohyun Park">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="less/style.less">
+    <link rel="stylesheet/less" type="text/css" href="less/style.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    
+<div class="loader-wrapper">
+<div class="loader">Loading</div>
+</div>
+
+
+    <!-- sound file -->
+    <audio id="ambient" preload="auto">
+  <source src="sound/ambient.mp3" type="audio/mpeg">
+</audio>
+   <audio id="ambient2" preload="auto">
+  <source src="sound/ambient2.mp3" type="audio/mpeg">
+</audio>
+   <audio id="cosmic" preload="auto">
+  <source src="sound/cosmic.mp3" type="audio/mpeg">
+</audio>
+   <audio id="cosmic2" preload="auto">
+  <source src="sound/cosmic2.mp3" type="audio/mpeg">
+</audio>
+    <audio id="base" preload="auto">
+  <source src="sound/base.mp3" type="audio/mpeg">
+</audio>
+    <audio id="base2" preload="auto">
+  <source src="sound/base2.mp3" type="audio/mpeg">
+</audio>
+    <audio id="drum" preload="auto">
+  <source src="sound/drum.mp3" type="audio/mpeg">
+</audio>
+    <audio id="drum2" preload="auto">
+  <source src="sound/drum2.mp3" type="audio/mpeg">
+</audio>
+    <audio id="snare" preload="auto">
+  <source src="sound/snare.mp3" type="audio/mpeg">
+</audio>
+    <audio id="light-drum" preload="auto">
+  <source src="sound/light-drum.mp3" type="audio/mpeg">
+</audio>
+    <audio id="exit" preload="auto">
+  <source src="sound/exit.mp3" type="audio/mpeg">
+</audio>
+   <audio id="exit2" preload="auto">
+  <source src="sound/exit2.mp3" type="audio/mpeg">
+</audio>
+    <audio id="oriental" preload="auto">
+  <source src="sound/oriental.mp3" type="audio/mpeg">
+</audio>
+    <audio id="laser" preload="auto">
+  <source src="sound/laser.mp3" type="audio/mpeg">
+</audio>
+    <audio id="xx" preload="auto">
+  <source src="sound/xx.mp3" type="audio/mpeg">
+</audio>
+    <!--          -->
+
+
+    <div class="header">
+        <img src="img/title.png" id="title" height="16" alt="">
+    </div>
+
+    <div class="sequence">&nbsp;</div>
+    <div class="direction">>>> Sequence will move in this direction.</div>
+    
+
+    <div class="wrapper">
+        <div class="control">
+            <span id="ambient-pre">AM1</span>
+            <input type="text" min="0" max="1" value="1" class="input" id="ambient-input-s1"> 
+            <input type="text" min="0" max="1" value="1" class="input" id="ambient-input-s2">
+            <input type="text" min="0" max="1" value="1" class="input" id="ambient-input-s3">
+            <input type="text" min="0" max="1" value="1" class="input" id="ambient-input-s4">
+            <input type="text" min="0" max="1" value="0.48" class="input" id="ambient-input-s5">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s6">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s7">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s8">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s9">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s11">
+            <input type="text" min="0" max="1" value="0.2" class="input" id="ambient-input-s12">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s13">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s14">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s15">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s16">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s17">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s18">
+            <input type="text" min="0" max="1" value="0.5" class="input" id="ambient-input-s19">
+            <input type="text" min="0" max="1" value="0.2" class="input" id="ambient-input-s20">
+            <input type="text" min="0" max="1" value="0.3" class="input" id="ambient-input-s21">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s22">
+            <input type="text" min="0" max="1" value="1" class="input" id="ambient-input-s23">
+            <input type="text" min="0" max="1" value="1" class="input" id="ambient-input-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-s25">
+        </div>
+        <div class="control">
+            <span id="ambient-pre-2">AM2</span>
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s1"> 
+            <input type="text" min="0" max="1" value="0.5" class="input" id="ambient-input-2-s2">
+            <input type="text" min="0" max="1" value="0.82" class="input" id="ambient-input-2-s3">
+            <input type="text" min="0" max="1" value="1" class="input" id="ambient-input-2-s4">
+            <input type="text" min="0" max="1" value="0.5" class="input" id="ambient-input-2-s5">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s6">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s7">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s8">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s9">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s11">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s12">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s13">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s14">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s15">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s16">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s17">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s18">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s19">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s20">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s21">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s22">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s23">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="ambient-input-2-s25">
+        </div> 
+        <div class="control">
+            <span id="cosmic-pre">CO1</span>
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s1">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s2">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s3">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s4">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s5">
+            <input type="text" min="0" max="1" value="1" class="input" id="cosmic-input-s6">
+            <input type="text" min="0" max="1" value="1" class="input" id="cosmic-input-s7">
+            <input type="text" min="0" max="1" value="0.99" class="input" id="cosmic-input-s8">
+            <input type="text" min="0" max="1" value="0.98" class="input" id="cosmic-input-s9">
+            <input type="text" min="0" max="1" value="0.1" class="input" id="cosmic-input-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s11">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s12">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s13">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s14">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s15">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s16">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s17">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s18">
+            <input type="text" min="0" max="1" value="0.2" class="input" id="cosmic-input-s19">
+            <input type="text" min="0" max="1" value="0.5" class="input" id="cosmic-input-s20">
+            <input type="text" min="0" max="1" value="0.22" class="input" id="cosmic-input-s21">
+            <input type="text" min="0" max="1" value="1" class="input" id="cosmic-input-s22">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s23">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-s25">
+        </div>   
+        <div class="control">
+            <span id="cosmic-pre-2">CO2</span>
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s1">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s2">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s3">
+            <input type="text" min="0" max="1" value="0.98" class="input" id="cosmic-input-2-s4">
+            <input type="text" min="0" max="1" value="1" class="input" id="cosmic-input-2-s5">
+            <input type="text" min="0" max="1" value="0.9" class="input" id="cosmic-input-2-s6">
+            <input type="text" min="0" max="1" value="0.88" class="input" id="cosmic-input-2-s7">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s8">
+            <input type="text" min="0" max="1" value="0.2" class="input" id="cosmic-input-2-s9">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s11">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s12">
+            <input type="text" min="0" max="1" value="0.2" class="input" id="cosmic-input-2-s13">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s14">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s15">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s16">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s17">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s18">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s19">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s20">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s21">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s22">
+            <input type="text" min="0" max="1" value="1" class="input" id="cosmic-input-2-s23">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="cosmic-input-2-s25">
+        </div>                  
+        <div class="control">
+            <span id="base-pre">BA1</span>
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s1">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s2">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s3">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s4">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s5">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s6">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s7">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s8">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s9">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s11">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s12">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s13">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s14">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s15">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s16">
+            <input type="text" min="0" max="1" value="1" class="input" id="base-input-s17">
+            <input type="text" min="0" max="1" value="1" class="input" id="base-input-s18">
+            <input type="text" min="0" max="1" value="1" class="input" id="base-input-s19">
+            <input type="text" min="0" max="1" value="1" class="input" id="base-input-s20">
+            <input type="text" min="0" max="1" value="1" class="input" id="base-input-s21">
+            <input type="text" min="0" max="1" value="1" class="input" id="base-input-s22">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s23">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-s25">
+        </div>
+        <div class="control">
+            <span id="base-pre-2">BA2</span>
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s1">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s2">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s3">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s4">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s5">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s6">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s7">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s8">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s9">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s11">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s12">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s13">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s14">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s15">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s16">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s17">
+            <input type="text" min="0" max="1" value="0.98" class="input" id="base-input-2-s18">
+            <input type="text" min="0" max="1" value="1" class="input" id="base-input-2-s19">
+            <input type="text" min="0" max="1" value="1" class="input" id="base-input-2-s20">
+            <input type="text" min="0" max="1" value="1" class="input" id="base-input-2-s21">
+            <input type="text" min="0" max="1" value="1" class="input" id="base-input-2-s22">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s23">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="base-input-2-s25">
+        </div>
+        <div class="control">
+            <span id="drum-pre">DR1</span>
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s1">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s2">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s3">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s4">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s5">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s6">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s7">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s8">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s9">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s11">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s12">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s13">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s14">
+            <input type="text" min="0" max="1" value="1" class="input" id="drum-input-s15">
+            <input type="text" min="0" max="1" value="1" class="input" id="drum-input-s16">
+            <input type="text" min="0" max="1" value="1" class="input" id="drum-input-s17">
+            <input type="text" min="0" max="1" value="1" class="input" id="drum-input-s18">
+            <input type="text" min="0" max="1" value="1" class="input" id="drum-input-s19">
+            <input type="text" min="0" max="1" value="1" class="input" id="drum-input-s20">
+            <input type="text" min="0" max="1" value="1" class="input" id="drum-input-s21">
+            <input type="text" min="0" max="1" value="1" class="input" id="drum-input-s22">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s23">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-s25">
+        </div>
+        <div class="control">
+            <span id="drum-pre-2">DR2</span>
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s1">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s2">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s3">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s4">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s5">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s6">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s7">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s8">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s9">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s11">
+            <input type="text" min="0" max="1" value="1" class="input" id="drum-input-2-s12">
+            <input type="text" min="0" max="1" value="1" class="input" id="drum-input-2-s13">
+            <input type="text" min="0" max="1" value="1" class="input" id="drum-input-2-s14">
+            <input type="text" min="0" max="1" value="1" class="input" id="drum-input-2-s15">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s16">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s17">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s18">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s19">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s20">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s21">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s22">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s23">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="drum-input-2-s25">
+        </div>
+        <div class="control">
+            <span id="snare-pre">SN0</span> 
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s1">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s2">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s3">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s4">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s5">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s6">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s7">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s8">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s9">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s11">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s12">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s13">
+            <input type="text" min="0" max="1" value="1" class="input" id="snare-input-s14">
+            <input type="text" min="0" max="1" value="0.87" class="input" id="snare-input-s15">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s16">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s17">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s18">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s19">
+            <input type="text" min="0" max="1" value="0.5" class="input" id="snare-input-s20">
+            <input type="text" min="0" max="1" value="0.7" class="input" id="snare-input-s21">
+            <input type="text" min="0" max="1" value="0.9" class="input" id="snare-input-s22">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s23">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="snare-input-s25">
+        </div>
+        <div class="control">
+     <span id="light-drum-pre">LD0</span>
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s1">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s2">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s3">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s4">
+            <input type="text" min="0" max="1" value="0.8" class="input" id="light-drum-input-s5">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s6">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s7">
+            <input type="text" min="0" max="1" value="1" class="input" id="light-drum-input-s8">
+            <input type="text" min="0" max="1" value="1" class="input" id="light-drum-input-s9">
+            <input type="text" min="0" max="1" value="0.99" class="input" id="light-drum-input-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s11">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s12">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s13">
+            <input type="text" min="0" max="1" value="0.22" class="input" id="light-drum-input-s14">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s15">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s16">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s17">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s18">
+            <input type="text" min="0" max="1" value="0.88" class="input" id="light-drum-input-s19">
+            <input type="text" min="0" max="1" value="0.9" class="input" id="light-drum-input-s20">
+            <input type="text" min="0" max="1" value="0.92" class="input" id="light-drum-input-s21">
+            <input type="text" min="0" max="1" value="1" class="input" id="light-drum-input-s22">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s23">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="light-drum-input-s25">
+        </div>
+        <div class="control">
+            <span id="exit-pre">EX1</span>
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s1">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s2">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s3">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s4">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s5">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s6">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s7">
+            <input type="text" min="0" max="1" value="0.2" class="input" id="exit-input-s8">
+            <input type="text" min="0" max="1" value="1" class="input" id="exit-input-s9">
+            <input type="text" min="0" max="1" value="0.5" class="input" id="exit-input-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s11">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s12">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s13">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s14">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s15">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s16">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s17">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s18">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s19">
+            <input type="text" min="0" max="1" value="0.2" class="input" id="exit-input-s20">
+            <input type="text" min="0" max="1" value="0.5" class="input" id="exit-input-s21">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s22">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s23">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-s25">
+        </div>   
+        <div class="control">
+            <span id="exit-pre-2">EX2</span>
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s1">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s2">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s3">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s4">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s5">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s6">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s7">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s8">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s9">
+            <input type="text" min="0" max="1" value="1" class="input" id="exit-input-2-s10">
+            <input type="text" min="0" max="1" value="1" class="input" id="exit-input-2-s11">
+            <input type="text" min="0" max="1" value="1" class="input" id="exit-input-2-s12">
+            <input type="text" min="0" max="1" value="1" class="input" id="exit-input-2-s13">
+            <input type="text" min="0" max="1" value="1" class="input" id="exit-input-2-s14">
+            <input type="text" min="0" max="1" value="1" class="input" id="exit-input-2-s15">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s16">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s17">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s18">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s19">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s20">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s21">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s22">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s23">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="exit-input-2-s25">
+        </div>                     
+        <div class="control">
+            <span id="oriental-pre">OR0</span>
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s1">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s2">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s3">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s4">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s5">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s6">
+            <input type="text" min="0" max="1" value="0.5" class="input" id="oriental-input-s7">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s8">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s9">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s11">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s12">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s13">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s14">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s15">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s16">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s17">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s18">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s19">
+            <input type="text" min="0" max="1" value="0.65" class="input" id="oriental-input-s20">
+            <input type="text" min="0" max="1" value="0.71" class="input" id="oriental-input-s21">
+            <input type="text" min="0" max="1" value="1" class="input" id="oriental-input-s22">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s23">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="oriental-input-s25">
+        </div>
+        <div class="control">
+            <span id="laser-pre">LA0</span>
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s1">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s2">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s3">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s4">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s5">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s6">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s7">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s8">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s9">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s11">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s12">
+            <input type="text" min="0" max="1" value="1" class="input" id="laser-input-s13">
+            <input type="text" min="0" max="1" value="1" class="input" id="laser-input-s14">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s15">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s16">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s17">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s18">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s19">
+            <input type="text" min="0" max="1" value="0.38" class="input" id="laser-input-s20">
+            <input type="text" min="0" max="1" value="0.5" class="input" id="laser-input-s21">
+            <input type="text" min="0" max="1" value="0.46" class="input" id="laser-input-s22">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s23">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s24">
+            <input type="text" min="0" max="1" value="0" class="input" id="laser-input-s25">
+        </div>
+        <div class="control">
+            <span id="xx-pre">XX0</span>
+            <input type="text" min="0" max="1" value="0" class="input" id="xx-input-s1">
+            <input type="text" min="0" max="1" value="0.02" class="input" id="xx-input-s2">
+            <input type="text" min="0" max="1" value="0.1" class="input" id="xx-input-s3">
+            <input type="text" min="0" max="1" value="0.3" class="input" id="xx-input-s4">
+            <input type="text" min="0" max="1" value="0.4" class="input" id="xx-input-s5">
+            <input type="text" min="0" max="1" value="0.2" class="input" id="xx-input-s6">
+            <input type="text" min="0" max="1" value="0" class="input" id="xx-input-s7">
+            <input type="text" min="0" max="1" value="0" class="input" id="xx-input-s8">
+            <input type="text" min="0" max="1" value="0" class="input" id="xx-input-s9">
+            <input type="text" min="0" max="1" value="0" class="input" id="xx-input-s10">
+            <input type="text" min="0" max="1" value="0" class="input" id="xx-input-s11">
+            <input type="text" min="0" max="1" value="0.9" class="input" id="xx-input-s12">
+            <input type="text" min="0" max="1" value="0.6" class="input" id="xx-input-s13">
+            <input type="text" min="0" max="1" value="0.2" class="input" id="xx-input-s14">
+            <input type="text" min="0" max="1" value="1" class="input" id="xx-input-s15">
+            <input type="text" min="0" max="1" value="1" class="input" id="xx-input-s16">
+            <input type="text" min="0" max="1" value="0.1" class="input" id="xx-input-s17">
+            <input type="text" min="0" max="1" value="0.1" class="input" id="xx-input-s18">
+            <input type="text" min="0" max="1" value="0" class="input" id="xx-input-s19">
+            <input type="text" min="0" max="1" value="0" class="input" id="xx-input-s20">
+            <input type="text" min="0" max="1" value="0" class="input" id="xx-input-s21">
+            <input type="text" min="0" max="1" value="0" class="input" id="xx-input-s22">
+            <input type="text" min="0" max="1" value="1" class="input" id="xx-input-s23">
+            <input type="text" min="0" max="1" value="1" class="input" id="xx-input-s24">
+            <input type="text" min="0" max="1" value="1" class="input" id="xx-input-s25">
+        </div>
+        
+
+        <p class="tag">&#8627; These are sound objects. Click to listen. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &#8627; You can decide the possibility to play each sound. Click number and change value.</p>
+        <p class="tag2">(0 = 0%, 0.5 = 50%, 1 = 100%, ...)</p>
+
+        <button id="play-button"><img id="button-img" src="img/play.png" width="20" alt=""></button>
+    </div>
+
+    <div class="info-button" onclick="showInfo()">?</div>
+    <div class="info">
+        <div id="info-content">
+            <p>&lt;info&gt;<br>This project is inspired from the concept of <a href="https://en.wikipedia.org/wiki/Markov_chain" target="_blank">Markov chain</a>.<br>Sounds of every sequence are triggered randomly <br> based on the possibility of their states. <br>Change value. Play sequence. Hack it.<br>&lt;/info&gt;<br><br><br><br><br>
+               &lt;design&gt;&lt;development&gt;<br><a href="https://www.parkjoohyun.com/" target="_blank"><span>Joohyun Park</span></a><br>&lt;/development&gt;&lt;/design&gt;<br><br><br> 
+                &lt;music&gt;<br><a href="https://soundcloud.com/saiopark" target="_blank"><span>SAIO.</span></a><br>&lt;/music&gt;
+                </p>
+        </div>
+    </div>
+
+
+    <div class="mode">Mode: <span><a href="/" style="padding:0 4px 0 4px;background-color:#00FF00; color:black;">Basic</a></span> | <span><a href="live.html" style="color:#00FF00;">Live</a></span></div>
+
+
+    <script src="script/input.js"></script>
+    <script src="script/hackers-pre.js"></script>    
+    <script src="script/hackers.js"></script>
+</body>
+
+</html>
