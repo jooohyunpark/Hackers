@@ -8,3 +8,6 @@ How can we trigger generative sounds living in a structurally coherent system? T
 ## Credit
 * Pojrect by Joohyun Park 
 * Music by [SAIO.](https://soundcloud.com/saiopark)
+
+## License
+MIT License
