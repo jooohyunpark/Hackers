@@ -32,7 +32,7 @@ const xx = document.querySelector("#xx");
 
 
 
-let number = 25;
+let number = 20;
 let ambientInput = [];
 let ambientInput2 = [];
 let cosmicInput = [];
