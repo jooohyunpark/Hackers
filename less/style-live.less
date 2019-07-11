@@ -32,11 +32,11 @@ html {
     text-align: center;
 }
 
-.indicator{
+.indicator {
     font-size: 14px;
 }
 
-.indicator #i{
+.indicator #i {
     position: absolute;
     right: 60%;
     text-align: right;
@@ -44,7 +44,7 @@ html {
 }
 
 
-.indicator #t{
+.indicator #t {
     left: 60%;
     position: absolute;
     text-align: left;
@@ -89,7 +89,7 @@ html {
 #play-button {
     width: 30px;
     height: 30px;
- margin-top: 2%;
+    margin-top: 2%;
 }
 
 .info-button {
@@ -116,7 +116,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding : 0;
+    padding: 0;
     text-align: center;
 }
 
@@ -126,7 +126,7 @@ html {
 }
 
 .info #info-content p {
-    width : 640px;
+    width: 640px;
     font-size: 16px;
     line-height: 1.8em;
 }
@@ -135,8 +135,9 @@ html {
     font-size: 18px;
 }
 
-.info #info-content a:link, a:visited {
-    color : @color;
+.info #info-content a:link,
+a:visited {
+    color: @color;
 }
 
 .mode {
@@ -148,7 +149,7 @@ html {
 }
 
 
- 
+
 button {
     padding: 0;
     border: none;
@@ -195,24 +196,28 @@ a:visited {
 }
 
 @keyframes dots {
+
     0%,
     20% {
         color: rgba(0, 0, 0, 0);
         text-shadow: 10px 0 0 rgba(0, 0, 0, 0),
-        20px 0 0 rgba(0, 0, 0, 0);
+            20px 0 0 rgba(0, 0, 0, 0);
     }
+
     40% {
         color: @color;
         text-shadow: 10px 0 0 rgba(0, 0, 0, 0),
-        20px 0 0 rgba(0, 0, 0, 0);
+            20px 0 0 rgba(0, 0, 0, 0);
     }
+
     60% {
         text-shadow: 10px 0 0 @color,
-        20px 0 0 rgba(0, 0, 0, 0);
+            20px 0 0 rgba(0, 0, 0, 0);
     }
+
     80%,
     100% {
         text-shadow: 10px 0 0 @color,
-        20px 0 0 @color;
+            20px 0 0 @color;
     }
 }

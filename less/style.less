@@ -11,7 +11,7 @@ html {
     background-color: black;
     color: white;
     font-family: "Courier New", Courier, monospace;
-//    overflow: hidden;
+    //    overflow: hidden;
     color: @color;
 }
 
@@ -27,7 +27,7 @@ html {
 }
 
 .direction {
-    margin-left : 11.2%;
+    margin-left: 11.2%;
 }
 
 .wrapper {
@@ -35,7 +35,7 @@ html {
     padding: @padding;
     height: 80vh;
     text-align: center;
-    padding-top : 8px;
+    padding-top: 8px;
 }
 
 .control {
@@ -43,11 +43,11 @@ html {
     padding: 10px;
 }
 
-.control span{
+.control span {
     cursor: default;
     border-right: 0.8px solid #00ff00;
-    border-left: 0.8px solid #00ff00;    
-    padding: 0 @tag-padding;    
+    border-left: 0.8px solid #00ff00;
+    padding: 0 @tag-padding;
 }
 
 
@@ -61,17 +61,17 @@ html {
     font-family: "Courier New", Courier, monospace;
 }
 
-.tag{
+.tag {
     font-size: @input-font-size;
     margin-bottom: 2px;
-    margin-top : 0;
+    margin-top: 0;
 }
 
-.tag2{
- padding-top : 0;
- margin-top : 0;    
- font-size: @input-font-size;
-text-align: right;
+.tag2 {
+    padding-top: 0;
+    margin-top: 0;
+    font-size: @input-font-size;
+    text-align: right;
     margin-right: 7%;
 }
 
@@ -186,24 +186,28 @@ a:visited {
 }
 
 @keyframes dots {
+
     0%,
     20% {
         color: rgba(0, 0, 0, 0);
         text-shadow: 10px 0 0 rgba(0, 0, 0, 0),
-        20px 0 0 rgba(0, 0, 0, 0);
+            20px 0 0 rgba(0, 0, 0, 0);
     }
+
     40% {
         color: @color;
         text-shadow: 10px 0 0 rgba(0, 0, 0, 0),
-        20px 0 0 rgba(0, 0, 0, 0);
+            20px 0 0 rgba(0, 0, 0, 0);
     }
+
     60% {
         text-shadow: 10px 0 0 @color,
-        20px 0 0 rgba(0, 0, 0, 0);
+            20px 0 0 rgba(0, 0, 0, 0);
     }
+
     80%,
     100% {
         text-shadow: 10px 0 0 @color,
-        20px 0 0 @color;
+            20px 0 0 @color;
     }
 }
