@@ -31,7 +31,7 @@ const play = () => {
 
     resetSequenceIndicator();
 
-    if (sequence > 24) {
+    if (sequence > 19) {
         playing = false;
         buttonImg.src = 'img/play.png';
         reset();
@@ -49,8 +49,8 @@ const play = () => {
 const trigger = () => {
     indicator.innerHTML = `Sequence: ${sequence}`;
 //    direction.innerHTML = "&nbsp;";
-    tag.innerHTML = "&nbsp;";
-    tag2.innerHTML = "&nbsp;";
+//    tag.innerHTML = "&nbsp;";
+//    tag2.innerHTML = "&nbsp;";
 
     let rAmbient = Math.random();
     let rAmbient2 = Math.random();    
@@ -111,8 +111,8 @@ const reset = () => {
 const resetDisplay = () => {
     indicator.innerHTML = "&nbsp;";
 //    direction.innerHTML = ">>>";
-    tag.innerHTML = "&#8627; These are sound objects. Click to listen. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &#8627; You can decide the possibility to play sounds. Click number and change value.";
-    tag2.innerHTML = "(0 = 0%, 1 = 100%, 0.5 = 50%, ...)";
+//    tag.innerHTML = "&#8627; These are sound objects. Click to listen. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &#8627; You can decide the possibility to play sounds. Click number and change value.";
+//    tag2.innerHTML = "(0 = 0%, 1 = 100%, 0.5 = 50%, ...)";
 
     resetDisplayElement(ambientInput);
     resetDisplayElement(ambientInput2);

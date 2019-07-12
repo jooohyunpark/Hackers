@@ -4,8 +4,8 @@ $(document).ready(() => $('.loader-wrapper').delay(2000).fadeOut('slow') );
 /////////// basic /////////////
 const indicator = document.querySelector(".sequence");
 //const direction = document.querySelector(".direction");
-const tag = document.querySelector(".tag");
-const tag2 = document.querySelector(".tag2");
+//const tag = document.querySelector(".tag");
+//const tag2 = document.querySelector(".tag2");
 const button = document.querySelector('#play-button');
 const buttonImg = document.querySelector('#button-img');
 ///////////////////////////////
