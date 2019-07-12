@@ -48,7 +48,7 @@ const play = () => {
 
 const trigger = () => {
     indicator.innerHTML = `Sequence: ${sequence}`;
-    direction.innerHTML = "&nbsp;";
+//    direction.innerHTML = "&nbsp;";
     tag.innerHTML = "&nbsp;";
     tag2.innerHTML = "&nbsp;";
 
@@ -110,7 +110,7 @@ const reset = () => {
 
 const resetDisplay = () => {
     indicator.innerHTML = "&nbsp;";
-    direction.innerHTML = ">>> Sequence will move in this direction.";
+//    direction.innerHTML = ">>>";
     tag.innerHTML = "&#8627; These are sound objects. Click to listen. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &#8627; You can decide the possibility to play sounds. Click number and change value.";
     tag2.innerHTML = "(0 = 0%, 1 = 100%, 0.5 = 50%, ...)";
 
@@ -205,12 +205,12 @@ const showInfo = () => {
     if (info.style.display == "block") {
         document.querySelector(".wrapper").style.display = "block";
         document.querySelector(".sequence").style.display = "block";
-        document.querySelector(".direction").style.display = "block";
+//        document.querySelector(".direction").style.display = "block";
         info.style.display = "none";
     } else {
         info.style.display = "block";
         document.querySelector(".wrapper").style.display = "none";
         document.querySelector(".sequence").style.display = "none";
-        document.querySelector(".direction").style.display = "none";
+//        document.querySelector(".direction").style.display = "none";
     }
 }
