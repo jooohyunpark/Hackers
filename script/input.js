@@ -1,4 +1,4 @@
-$(document).ready(() => $('.loader-wrapper').delay(2000).fadeOut('slow') );
+//$(document).ready(() => $('.loader-wrapper').delay(1800).fadeOut('slow') );
 
 
 /////////// basic /////////////
