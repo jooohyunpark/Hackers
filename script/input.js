@@ -63,20 +63,20 @@ const adjustValue = (target, num) => {
 
 for (let i = 0; i < number; i++) {
     ambientInput[i] = document.querySelector(`#ambient-input-s${i+1}`);
-    ambientInput2[i] = document.querySelector(`#ambient-input-2-s${i+1}`);    
+    ambientInput2[i] = document.querySelector(`#ambient-input-2-s${i+1}`);
     cosmicInput[i] = document.querySelector(`#cosmic-input-s${i+1}`);
-    cosmicInput2[i] = document.querySelector(`#cosmic-input-2-s${i+1}`);        
-    baseInput[i] = document.querySelector(`#base-input-s${i+1}`);    
-    baseInput2[i] = document.querySelector(`#base-input-2-s${i+1}`);        
-    drumInput[i] = document.querySelector(`#drum-input-s${i+1}`);        
-    drumInput2[i] = document.querySelector(`#drum-input-2-s${i+1}`);         
-    snareInput[i] = document.querySelector(`#snare-input-s${i+1}`); 
-    lightDrumInput[i] = document.querySelector(`#light-drum-input-s${i+1}`); 
-    exitInput[i] = document.querySelector(`#exit-input-s${i+1}`);     
-    exitInput2[i] = document.querySelector(`#exit-input-2-s${i+1}`);     
-    orientalInput[i] = document.querySelector(`#oriental-input-s${i+1}`); 
-    laserInput[i] = document.querySelector(`#laser-input-s${i+1}`); 
-    xxInput[i] = document.querySelector(`#xx-input-s${i+1}`);     
+    cosmicInput2[i] = document.querySelector(`#cosmic-input-2-s${i+1}`);
+    baseInput[i] = document.querySelector(`#base-input-s${i+1}`);
+    baseInput2[i] = document.querySelector(`#base-input-2-s${i+1}`);
+    drumInput[i] = document.querySelector(`#drum-input-s${i+1}`);
+    drumInput2[i] = document.querySelector(`#drum-input-2-s${i+1}`);
+    snareInput[i] = document.querySelector(`#snare-input-s${i+1}`);
+    lightDrumInput[i] = document.querySelector(`#light-drum-input-s${i+1}`);
+    exitInput[i] = document.querySelector(`#exit-input-s${i+1}`);
+    exitInput2[i] = document.querySelector(`#exit-input-2-s${i+1}`);
+    orientalInput[i] = document.querySelector(`#oriental-input-s${i+1}`);
+    laserInput[i] = document.querySelector(`#laser-input-s${i+1}`);
+    xxInput[i] = document.querySelector(`#xx-input-s${i+1}`);
 }
 
 
