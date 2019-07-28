@@ -198,13 +198,14 @@ const resetAll = (target) => {
 
 
 const updateRandomVal = (target, val) => {
-    let textnode = document.createTextNode(' ' + val);
+    console.log(val)
+    let textnode = document.createTextNode(' ' + trim(val, 4));
     target.insertBefore(textnode, target.childNodes[0]);
 }
 
 
 const updateTag = (target, val) => {
-    let textnode = document.createTextNode(val + ' ');
+    let textnode = document.createTextNode(trim(val, 2) + ' ');
     target.appendChild(textnode);
 }
 
@@ -233,3 +234,6 @@ const showInfo = () => {
 }
 
 
+function trim(x, length) {
+  return Number.parseFloat(x).toFixed(length);
+}

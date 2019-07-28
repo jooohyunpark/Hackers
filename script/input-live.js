@@ -1,6 +1,3 @@
-//$(document).ready(() => $('.loader-wrapper').delay(1800).fadeOut('slow') );
-
-
 /////////// basic /////////////
 const indicator = document.querySelector(".sequence");
 const iTag = document.querySelector("#i");
