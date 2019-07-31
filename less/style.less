@@ -188,6 +188,19 @@ a:hover {
 
 @media only screen and (max-width: 1120px),
 screen and (max-height: 820px) {
+    .input {
+        width: @input-width - 0.6px;
+        font-size: @input-font-size - 4px;
+    }
+
+    .control {
+        margin: 0;
+        padding: 4px;
+    }
+}
+
+@media only screen and (max-width: 840px),
+screen and (max-height: 620px) {
     .warn-wrapper {
         display: block;
     }
